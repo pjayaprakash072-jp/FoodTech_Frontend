@@ -23,7 +23,10 @@ const Register = () => {
       )
       const data = await response.json();
       if(response.ok){
-        console.log(data);
+        console.log(data.message);
+        setusername("");
+        setemail("");
+        setpassword("");
         alert("vendor registered successfull!")
       }
     } catch (error) {
