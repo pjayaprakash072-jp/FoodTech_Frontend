@@ -5,11 +5,11 @@
 @layer components {
 
   .form-container {
-    @apply w-full max-w-2xl border border-gray-300 rounded-lg shadow-lg p-8 bg-white;
+    @apply w-full max-w-2xl p-8 bg-white border border-gray-300 rounded-lg shadow-lg;
   }
 
   .form-title {
-    @apply text-3xl font-bold text-center text-blue-700 mb-8;
+    @apply mb-8 text-3xl font-bold text-center text-blue-700;
   }
 
   .form-group {
@@ -24,11 +24,20 @@
     @apply w-full h-10 px-3 border-2 border-slate-400 rounded-md focus:outline-none focus:border-blue-600;
   }
 
+  /* File Upload Input */
+  .form-file {
+    @apply w-full px-3 py-2 border-2 border-slate-400 rounded-md cursor-pointer focus:outline-none focus:border-blue-600;
+  }
+
   .form-button {
-    @apply bg-blue-700 text-white px-8 py-2 rounded-md hover:bg-blue-800 transition duration-300;
+    @apply px-8 py-2 text-white bg-blue-700 rounded-md transition duration-300 hover:bg-blue-800;
   }
 
   .button-container {
     @apply flex justify-center mt-8;
+  }
+  /* Description Textarea */
+  .form-textarea {
+    @apply w-full px-3 py-2 border-2 border-slate-400 rounded-md resize-none focus:outline-none focus:border-blue-600;
   }
 }
