@@ -52,4 +52,19 @@
   .loginbtn:hover , .registerbtn:hover{
     @apply bg-white text-black
   }
+.option-group {
+  @apply flex flex-wrap gap-4;
+}
+  .option-group label {
+    @apply flex items-center gap-2 cursor-pointer font-medium;
+  }
+
+  .option-group input[type="checkbox"],
+  .option-group input[type="radio"] {
+    @apply w-4 h-4 cursor-pointer accent-blue-600;
+  }
+
+  .option-group label:hover {
+    @apply text-blue-600;
+  }
 }

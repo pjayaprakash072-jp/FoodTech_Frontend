@@ -14,7 +14,35 @@ const AddRGroup = () => {
             </div>
             <div className="form-group">
                 <label htmlFor="" className="form-label">Category</label>
-                <input type="text" className="form-input" placeholder="Category"/>
+                {/* <input type="text" className="form-input" placeholder="Category"/> */}
+                <div className="option-group">
+                    <label>
+                        <input type="checkbox" value="veg" /> Veg
+                    </label>
+                    <label>
+                        <input type="checkbox" value="non-veg" />Non-Veg
+                    </label>
+                </div>
+            </div>
+            <div className="form-group">
+                <label htmlFor="" className="form-label">Region</label>
+                <div className="option-group">
+                    <label>
+                        <input type="checkbox" value="Bakery" /> Bakery
+                    </label>
+                    <label>
+                        <input type="checkbox" value="Desserts" /> Desserts
+                    </label>
+                    <label>
+                        <input type="checkbox" value="Indian" /> Indian
+                    </label>
+                    <label>
+                        <input type="checkbox" value="Italian" />Italian
+                    </label>
+                    <label>
+                        <input type="checkbox" value="Chinese" />Chinese
+                    </label>
+                </div>
             </div>
             <div className="form-group">
                 <label htmlFor="" className="form-label">Offer</label>
