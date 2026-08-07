@@ -1,9 +1,9 @@
-const SideBar = () => {
+const SideBar = ({showAddProductHandler,showAddRGroupHandler}) => {
   return (
     <div className="w-full max-w-40 h-full bg-gray-500">
       <ul className="p-3 space-y-2 ">
-        <li>Add Restaurant</li>
-        <li>Add Product</li>
+        <li onClick={showAddRGroupHandler}>Add Restaurant</li>
+        <li onClick={showAddProductHandler}>Add Product</li>
         <li>All Products</li>
         <li>User</li>
       </ul>
