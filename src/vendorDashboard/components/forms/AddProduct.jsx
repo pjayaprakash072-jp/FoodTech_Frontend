@@ -25,8 +25,16 @@ const AddProduct = () => {
                 </div>
             </div>
             <div className="form-group">
-                <label htmlFor="" className="form-label">bestseller</label>
-                <input type="text" className="form-input" placeholder="bestseller"/>
+                <label htmlFor="" className="form-label">BestSeller</label>
+                {/* <input type="text" className="form-input" placeholder="Category"/> */}
+                <div className="option-group">
+                    <label>
+                        <input type="radio" value="yes" /> Veg
+                    </label>
+                    <label>
+                        <input type="radio" value="no" />Non-Veg
+                    </label>
+                </div>
             </div>
             <div className="form-group">
                 <label htmlFor="" className="form-label">description</label>

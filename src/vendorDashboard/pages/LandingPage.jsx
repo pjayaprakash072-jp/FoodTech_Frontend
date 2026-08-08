@@ -20,6 +20,7 @@ const LandingPage = () => {
     setShowRegister(false);
     setShowAddRGroup(false);
     setshowAddProduct(false);
+    setShowWelcome(false);
   }
   
   const showRegisterHandler = ()=>{
@@ -27,12 +28,14 @@ const LandingPage = () => {
     setShowLogin(false);
     setShowAddRGroup(false);
     setshowAddProduct(false);
+    setShowWelcome(false);
   }
   
   const showAddRGroupHandler= ()=>{
     setShowAddRGroup(true);
     setshowAddProduct(false);
     setShowRegister(false);
+    setShowWelcome(false);
     setShowLogin(false);
   }
   
@@ -41,6 +44,7 @@ const LandingPage = () => {
     setShowLogin(false);
     setShowRegister(false);
     setShowAddRGroup(false);
+    setShowWelcome(false);
   }
   const showWelcomeHandler = ()=>{
     setshowAddProduct(false);
