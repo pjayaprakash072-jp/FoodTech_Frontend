@@ -23,7 +23,7 @@ const Login = ({showWelcomeHandler}) => {
         const data = await response.json();
         alert("vendor login successfully")
         localStorage.setItem("loginToken" , data.token)
-        localStorage.setItem("username" , data.vendorname)
+        localStorage.setItem("vendorname" , data.vendorname)
         // console.log(data.username)
         showWelcomeHandler();
       }
