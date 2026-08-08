@@ -69,6 +69,7 @@ const AddRGroup = () => {
                 setOffer("");
                 setFile(null)
                 alert("RGroup added successfully")
+                localStorage.setItem("Restaurantid" , data.RGroupid)
                 console.log(data)
             }
         } catch (error) {
