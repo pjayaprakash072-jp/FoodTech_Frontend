@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { API_URI } from './../../data/apiPath';
-const Login = () => {
+const Login = ({showWelcomeHandler}) => {
 
   const [email, setemail] = useState("");
   const [password, setpassword] = useState("");
@@ -23,6 +23,9 @@ const Login = () => {
         const data = await response.json();
         alert("vendor login successfully")
         localStorage.setItem("loginToken" , data.token)
+        localStorage.setItem("username" , data.vendorname)
+        // console.log(data.username)
+        showWelcomeHandler();
       }
     } catch (error) {
       console.log("Error", error)

@@ -2,7 +2,7 @@ import { useState } from "react"
 
 // global styles are using form the index.css
 import { API_URI } from "../../data/apiPath";
-const Register = () => {
+const Register = ({showLoginHandler}) => {
 
   const [username, setusername] = useState("");
   const [email,setemail] = useState("");
@@ -28,6 +28,7 @@ const Register = () => {
         setemail("");
         setpassword("");
         alert("vendor registered successfull!")
+        showLoginHandler()
       }
     } catch (error) {
       console.log("Error Vendor registration failed" ,error);
