@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { API_URI } from "../../data/apiPath";
-
+// for practive purpose just restirct like only 1 rstaruent should be there for user in backend with the help of vendor.RGroup.lenght>0 res.max 1 restaurant is added.
 const AddRGroup = () => {
 
 
@@ -79,7 +79,7 @@ const AddRGroup = () => {
     }
   return (
     <div className="form-container">
-        <h1 className="form-title">Add Restaruent Group</h1>
+        <h1 className="form-title">Add Restaurant Group</h1>
         <form onSubmit={handleSubmit}>
             <div className="form-group">
                 <label htmlFor="" className="form-label">RGroupName</label>

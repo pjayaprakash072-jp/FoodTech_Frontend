@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { API_URI } from "../../data/apiPath";
-
+// modify the issue here when vendor add rgroup that time only the rgid is added to local storage.
 const AddProduct = () => {
 
     const [productName, setProductName] = useState("");
@@ -25,7 +25,16 @@ const AddProduct = () => {
     const handlesubmit = async (e)=>{
         e.preventDefault();
         try {
+            const token = localStorage.getItem('loginToken')
             const restaurantid = localStorage.getItem("Restaurantid");
+            if(!token){
+                console.log("please login");
+                return;
+            }
+            if(!restaurantid){
+                console.log("restaurant not found please select one");
+                return;
+            }
             const fd = new FormData();
             fd.append("productName",productName)
             fd.append("price" , price)

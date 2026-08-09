@@ -17,13 +17,14 @@ const Login = ({showWelcomeHandler}) => {
           body : JSON.stringify({email, password})
         }
       )
+      const data = await response.json();
       if(response.ok){
         setemail("")
         setpassword("")
-        const data = await response.json();
         alert("vendor login successfully")
         localStorage.setItem("loginToken" , data.token)
         localStorage.setItem("vendorname" , data.vendorname)
+        localStorage.setItem("Restaurantid", data.firstrgid)
         // console.log(data.username)
         showWelcomeHandler();
       }

@@ -1,4 +1,4 @@
-const SideBar = ({showAddProductHandler,showAddRGroupHandler}) => {
+const SideBar = ({showAddProductHandler,showAddRGroupHandler ,showAllProductsHandler}) => {
 
   const logoutHandler = (e)=>{
     e.preventDefault();
@@ -11,9 +11,9 @@ const SideBar = ({showAddProductHandler,showAddRGroupHandler}) => {
   return (
     <div className="sidebar-dev">
       <ul className="sidebar-ul">
-        <li onClick={showAddRGroupHandler}>Add Restaurant</li>
-        <li onClick={showAddProductHandler}>Add Product</li>
-        <li>All Products</li>
+        <li onClick={showAddRGroupHandler}   className="loginbtn">Add Restaurant</li>
+        <li onClick={showAddProductHandler}  className="loginbtn">Add Product</li>
+        <li onClick={showAllProductsHandler} className="loginbtn">All Products</li>
         <li>User</li>
         <li onClick={logoutHandler}>Clear All</li>
         <li onClick={removeRestaurantid}>🗑️ Rid</li>
