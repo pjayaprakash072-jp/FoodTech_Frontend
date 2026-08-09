@@ -1,12 +1,20 @@
-const NavBar = ({showLoginHandler , showRegisterHandler}) => {
+const NavBar = ({showLoginHandler , showRegisterHandler , showLogout,logoutHandler}) => {
   console.log(showLoginHandler)
   return (
     <div className="navbar-dev">
       <div>Vendor Dashboard</div>
 
       <div>
-        <span className="loginbtn" onClick={showLoginHandler}>Login / </span>
-        <span  className="registerbtn" onClick={showRegisterHandler}>Register</span>
+        {
+          (!showLogout ? <>
+          <span className="loginbtn" onClick={showLoginHandler}>Login / </span>
+          <span  className="registerbtn" onClick={showRegisterHandler}>Register</span>
+          </>
+          :
+          <span  className="registerbtn" onClick={logoutHandler}>Logout</span>
+          )
+        }
+        
       </div>
     </div>
   );

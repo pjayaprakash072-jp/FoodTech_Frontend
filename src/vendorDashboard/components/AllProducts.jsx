@@ -41,7 +41,7 @@ const AllProducts = () => {
         }
     }
   return (
-    <div>{showProducts.length === 0 ? (
+    <div>{!showProducts ? (
     <h1>No products is there</h1>
     ):(
         <table>

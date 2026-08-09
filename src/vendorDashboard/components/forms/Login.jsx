@@ -26,6 +26,7 @@ const Login = ({showWelcomeHandler}) => {
         localStorage.setItem("vendorname" , data.vendorname)
         localStorage.setItem("Restaurantid", data.firstrgid)
         // console.log(data.username)
+        window.location.reload(); // this is written for login, logout disable functionality.
         showWelcomeHandler();
       }
     } catch (error) {
