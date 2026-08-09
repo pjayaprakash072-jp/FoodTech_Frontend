@@ -115,24 +115,46 @@ const LandingPage = () => {
   }
   
   const showAddRGroupHandler= ()=>{
-    localStorage.setItem("currentPage", "addRestaurant");
-    setShowAddRGroup(true);
-    setshowAddProduct(false);
+    if(showLogout){
+      localStorage.setItem("currentPage", "addRestaurant");
+      setShowAddRGroup(true);
+      setshowAddProduct(false);
+      setShowRegister(false);
+      setShowWelcome(false);
+      setShowLogin(false);
+      setShowAllProducts(false);
+
+    }else{
+      alert("please login");
+    setShowLogin(true);
     setShowRegister(false);
+    setShowAddRGroup(false);
+    setshowAddProduct(false);
     setShowWelcome(false);
-    setShowLogin(false);
     setShowAllProducts(false);
+    }
 
   }
   
   const showAddProductHandler = ()=>{
-    localStorage.setItem("currentPage", "addProduct");
-    setshowAddProduct(true);
-    setShowLogin(false);
+    if(showLogout){
+      localStorage.setItem("currentPage", "addProduct");
+      setshowAddProduct(true);
+      setShowLogin(false);
+      setShowRegister(false);
+      setShowAddRGroup(false);
+      setShowWelcome(false);
+      setShowAllProducts(false);
+
+    }else{
+      alert("please login");
+    setShowLogin(true);
     setShowRegister(false);
     setShowAddRGroup(false);
+    setshowAddProduct(false);
     setShowWelcome(false);
     setShowAllProducts(false);
+    }
 
   }
   const showWelcomeHandler = ()=>{
@@ -145,13 +167,24 @@ const LandingPage = () => {
     setShowWelcome(true);
   }
   const showAllProductsHandler = ()=>{
-    localStorage.setItem("currentPage", "allProducts");
-    setshowAddProduct(false);
-    setShowLogin(false);
+    if(showLogout){
+      localStorage.setItem("currentPage", "allProducts");
+      setshowAddProduct(false);
+      setShowLogin(false);
+      setShowRegister(false);
+      setShowAddRGroup(false);
+      setShowWelcome(false);
+      setShowAllProducts(true);
+
+    }else{
+      alert("please login");
+    setShowLogin(true);
     setShowRegister(false);
     setShowAddRGroup(false);
+    setshowAddProduct(false);
     setShowWelcome(false);
-    setShowAllProducts(true);
+    setShowAllProducts(false);
+    }
   }
   
   return (
@@ -160,12 +193,12 @@ const LandingPage = () => {
       <div className="flex flex-1">
         <SideBar showAddProductHandler = {showAddProductHandler} showAddRGroupHandler = {showAddRGroupHandler} showAllProductsHandler = {showAllProductsHandler}/>
         <div className="flex-1 p-4 flex justify-center items-start pt-[50px]">
-          {showLogin && <Login showWelcomeHandler = {showWelcomeHandler}/>}
-          {showRegister && <Register  showLoginHandler = {showLoginHandler}/>}
-          {showAddRGroup && <AddRGroup/>}
-          {showAddProduct && <AddProduct/>}
+          {showLogin &&  <Login showWelcomeHandler = {showWelcomeHandler}/>}
+          {showRegister &&  <Register  showLoginHandler = {showLoginHandler}/>}
+          {showAddRGroup && showLogout && <AddRGroup/>}
+          {showAddProduct && showLogout && <AddProduct/>}
           {showWelcome && <Welcome/>}
-          {showAllproducts && <AllProducts/>}
+          {showAllproducts && showLogout && <AllProducts/>}
         </div>
       </div>
     </div>
