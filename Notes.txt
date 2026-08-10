@@ -1,0 +1,32 @@
+
+====================================================================================================================================================================
+
+Frontend
+-------
+
+
+installation
+------------
+    ->npm create vite@latest
+        |
+    ->Frontend
+        |
+    ->React
+        |
+    ->Javascript
+        |
+    ->EsLint
+        |
+    ->yes
+
+vendorDashboard
+----------------
+    ->components
+        ->NavBar
+        ->SideBar
+        ->Allproducts
+        ->forms
+            ->vendor register
+            ->vendor login
+            ->add rgroup(RestaurantGroup)
+            ->add products.
